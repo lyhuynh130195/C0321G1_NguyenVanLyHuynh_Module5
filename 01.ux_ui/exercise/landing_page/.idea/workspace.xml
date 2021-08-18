@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b2bbfa1-6c88-4fd1-8890-d76a93376370" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../.idea/C0321G1_NguyenVanLyHuynh_Module5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/landing_page.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/landing_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/.idea/fibonacci.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/dist/main.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/dist/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/dist/main.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/exercise/fibonacci/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-control-flow-and-loop/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-control-flow-and-loop/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-control-flow-and-loop/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-control-flow-and-loop/.idea/typescript-control-flow-and-loop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-control-flow-and-loop/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-control-flow-and-loop/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-control-flow-and-loop/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-control-flow-and-loop/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-control-flow-and-loop/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-is-prime/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-is-prime/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-is-prime/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-is-prime/.idea/typescript-is-prime.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-is-prime/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-is-prime/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-is-prime/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-is-prime/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-is-prime/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-is-prime/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/.idea/typescript-promise.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/dist/main.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/dist/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/dist/main.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-promise/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/ package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/.idea/typescript-shape.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/IArea.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/IArea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/IArea.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/main.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/main.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/rectangle.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/rectangle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/rectangle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/shape.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/shape.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/dist/shape.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/src/IArea.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/src/rectangle.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/src/shape.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-shape/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-variable/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-variable/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-variable/.idea/typescript-variable.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-variable/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-variable/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-variable/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-variable/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../02.typescrip/practice/typescript-variable/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/test/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/test/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/test/.idea/test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/test/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/test/test.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1wsjINuZ7wRC2Bd9oWpvvzYAK6p" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b2bbfa1-6c88-4fd1-8890-d76a93376370" name="Default Changelist" comment="" />
+      <created>1629254109095</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629254109095</updated>
+      <workItem from="1629254110386" duration="3367000" />
+      <workItem from="1629268468122" duration="891000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

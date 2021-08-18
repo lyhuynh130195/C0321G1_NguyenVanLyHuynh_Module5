@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d9201198-822e-405a-856c-0f3d531a9a65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/01.ux_ui/practice/test/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01.ux_ui/practice/test/bai2_class_interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01.ux_ui/practice/test/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01.ux_ui/practice/test/test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01.ux_ui/practice/test/test.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1wrDTs4hdq8ozcjKXftWtSwOv8x" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9201198-822e-405a-856c-0f3d531a9a65" name="Default Changelist" comment="" />
+      <created>1629207824380</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629207824380</updated>
+      <workItem from="1629207825914" duration="68000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/01.ux_ui/practice/test/bai2_class_interface.js" />
+        <option value="$PROJECT_DIR$/01.ux_ui/practice/test/test.js" />
+      </list>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1629207870507">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1629207870507" />
+  </component>
+</project>

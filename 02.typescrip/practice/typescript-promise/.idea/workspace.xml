@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ba13d967-dcac-448d-aaec-f8fe9b67edf7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../.idea/C0321G1_NguyenVanLyHuynh_Module5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/.idea/fibonacci.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/dist/main.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/dist/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/dist/main.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/fibonacci/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-control-flow-and-loop/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-control-flow-and-loop/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-control-flow-and-loop/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-control-flow-and-loop/.idea/typescript-control-flow-and-loop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-control-flow-and-loop/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-control-flow-and-loop/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-control-flow-and-loop/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-control-flow-and-loop/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-control-flow-and-loop/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-prime/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-prime/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-prime/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-prime/.idea/typescript-is-prime.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-prime/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-prime/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-prime/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-prime/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-prime/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-prime/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/typescript-promise.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/main.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/main.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/ package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/.idea/typescript-shape.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/IArea.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/IArea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/IArea.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/main.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/main.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/rectangle.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/rectangle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/rectangle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/shape.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/shape.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/dist/shape.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/src/IArea.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/src/rectangle.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/src/shape.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-shape/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-variable/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-variable/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-variable/.idea/typescript-variable.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-variable/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-variable/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-variable/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-variable/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-variable/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01.ux_ui/practice/test/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01.ux_ui/practice/test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01.ux_ui/practice/test/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01.ux_ui/practice/test/.idea/test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01.ux_ui/practice/test/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01.ux_ui/practice/test/test.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="package.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1wrd3s9D3OEkGxJjNSkYLBZEWCJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../CodeGym -2021/tai_lieu_moule1" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\C0321G1_NguyenVanLyHuynh_Module5\02.typescrip\practice\typescript-promise\node_modules\typescript\lib" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba13d967-dcac-448d-aaec-f8fe9b67edf7" name="Default Changelist" comment="" />
+      <created>1629220444209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629220444209</updated>
+      <workItem from="1629220445474" duration="346000" />
+      <workItem from="1629249815342" duration="2203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1629251685606">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1629251685606" />
+    <state width="1344" height="174" key="GridCell.Tab.0.bottom" timestamp="1629220618556">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1629220618556" />
+    <state width="1344" height="174" key="GridCell.Tab.0.center" timestamp="1629220618556">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1629220618556" />
+    <state width="1344" height="174" key="GridCell.Tab.0.left" timestamp="1629220618555">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1629220618555" />
+    <state width="1344" height="174" key="GridCell.Tab.0.right" timestamp="1629220618556">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1629220618556" />
+  </component>
+</project>
