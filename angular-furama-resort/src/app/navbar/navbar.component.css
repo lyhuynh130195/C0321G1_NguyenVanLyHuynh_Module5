@@ -1,0 +1,24 @@
+#logo-and-username {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+  background-color: #bde49e;
+}
+
+#name-user {
+  display: flex;
+}
+
+
+#logo-and-username {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
+
+#name-user {
+  display: flex;
+
+}
+
+

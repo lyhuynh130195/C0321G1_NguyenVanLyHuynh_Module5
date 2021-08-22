@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title</title>
+
+  <style>
+    #search-and-title{
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 130px;
+    }
+  </style>
+
+</head>
+<body>
+
+
+
+<div id="search-and-title">
+  <div id="items1">
+    <h2 style="color: #34ce57;position: relative;margin-top: 20px" >CUSTOMER LIST</h2>
+  </div>
+  <div id="item2">
+    <form >
+      <label><input type="text" name="keyword" placeholder="Enter customer name or code"></label>
+      <label><input type="submit" value="Search" class="item-search"></label>
+    </form>
+  </div>
+</div>
+
+<div  style="position: relative;margin: 10px 130px">
+  <strong id="message"  style="color: limegreen;margin-bottom: 10px"></strong>
+</div>
+
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Birthday</th>
+      <th scope="col">Gender</th>
+      <th scope="col">IdCard</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr >
+      <th scope="row" :text="${index.index+1}"></th>
+      <td ></td>
+
+      <td><a class="btn btn-primary" role="button">Edit</a></td>
+
+      <td>
+        <button data1="${customer.id}" data2="${customer.name}"
+                onclick="onDelete(this.getAttribute('data1'),this.getAttribute('data2'))"
+                type="button" class="btn btn-danger" data-toggle="modal"
+                data-target="#exampleModal">Delete
+        </button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--<div class="container">-->
+<!--  <nav aria-label="Page navigation example">-->
+<!--    <ul class="pagination">-->
+<!--      <li class="page-item"><a class="page-link" href="@{/customer/list(page=${customerList.number - 1},keyword=${keywordValue})}"-->
+<!--                               th:if="${customerList.hasPrevious()}">Previous</a></li>-->
+<!--      <li class="page-item" th:each="pageNo : ${#numbers.sequence(0, customerList.totalPages - 1)}">-->
+<!--        <a class="page-link" th:href="@{/customer/list(page = ${pageNo},keyword=${keywordValue})}"-->
+<!--           th:text="${pageNo + 1} "></a>-->
+<!--      </li>-->
+<!--      <li class="page-item"><a class="page-link" th:href="@{/customer/list(page=${customerList.number + 1},keyword=${keywordValue})}"-->
+<!--                               th:if="${customerList.hasNext()}">Next</a></li>-->
+<!--    </ul>-->
+<!--  </nav>-->
+<!--</div>-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirm delete</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form  action="/customer/delete" method="post">
+        <div class="modal-body">
+          Bạn có chắc chắn muốn xóa ?
+        </div>
+        <input type="hidden" name="action" value="delete">
+        <input type="hidden" name="id" value="" id="customerDel">
+        <input type="text"  value="" id="customerName" readonly>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+          <button type="submit" class="btn btn-primary">Có</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function onDelete(id,name) {
+    document.getElementById("customerDel").value = id;
+    document.getElementById("customerName").value = name;
+  }
+</script>
+
+</body>
+</html>

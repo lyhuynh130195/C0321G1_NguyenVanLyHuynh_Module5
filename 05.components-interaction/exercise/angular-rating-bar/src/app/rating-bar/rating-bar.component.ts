@@ -53,5 +53,5 @@ export class RatingBarComponent implements OnInit, OnChanges {
   reset() {
     this.ratingUnits.forEach((item, idx) => item.active = idx < this.ratingValue);
   }
-  
+
 }

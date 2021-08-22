@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Output, OnInit, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  flags: Flags = {
-    flag:false
-  }
+  @Output() showAdd = new EventEmitter();
 
   constructor() {
   }
@@ -16,4 +14,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showForm() {
+    this.showAdd.emit();
+  }
 }

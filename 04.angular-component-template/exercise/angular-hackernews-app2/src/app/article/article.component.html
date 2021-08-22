@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar (showAdd)="flag =!flag" ></app-navbar>
 
 <div class="container ">
   <h2>Today's article</h2>
@@ -15,17 +15,17 @@
   </div>
 
   <!--add-->
-  <div>
+  <div *ngIf="flag">
     <h2>Article Information</h2>
     <table>
       <tr>
         <td>Title:</td>
-        <td><textarea  [(ngModel)]="article.title" cols="70"></textarea></td>
+        <td><textarea  [(ngModel)]="title" cols="70"></textarea></td>
       </tr>
       <tr>
         <td>Url:</td>
         <td>
-          <textarea  [(ngModel)]="article.url"  cols="70"></textarea>
+          <textarea  [(ngModel)]="url"  cols="70"></textarea>
         </td>
       </tr>
       <tr>

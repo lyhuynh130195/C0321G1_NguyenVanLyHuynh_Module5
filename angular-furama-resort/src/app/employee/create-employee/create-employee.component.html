@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee</title>
+
+</head>
+<body>
+
+<div><h1 style="color: #34ce57;text-align: center">Create Employee</h1></div>
+<div id="form">
+  <form action="@{/employee/save}" method="post" :object="${employeeDto}">
+    <label for="name">Employee Name</label>
+    <input type="text" id="name" field="*{name}" placeholder="Customer name..">
+
+    <label for="birthday">Birthday </label>
+    <input class="form-control" type="date" id="birthday" field="*{birthday}" placeholder="Birthday ..">
+    <div style="color: #ff0026" if="${#fields.hasErrors('birthday')}" errors="*{birthday}"></div>
+
+
+    <label for="idCard">IDCard </label>
+    <input type="text" id="idCard" :field="*{idCard}" placeholder="IDCard ..">
+    <div style="color: #ff0026" :if="${#fields.hasErrors('idCard')}" :errors="*{idCard}"></div>
+
+
+    <label for="phone">Number Phone </label>
+    <input type="text" id="phone" :field="*{phone}" placeholder="Number Phone ..">
+    <div style="color: #ff0026" :if="${#fields.hasErrors('phone')}" :errors="*{phone}"></div>
+
+
+    <label for="email">Email </label>
+    <input type="text" id="email" :field="*{email}" placeholder="Email  ..">
+    <div style="color: #ff0026" :if="${#fields.hasErrors('email')}" :errors="*{email}"></div>
+
+
+    <label for="address">Address </label>
+    <input type="text" id="address" :field="*{address}" placeholder="Address  ..">
+
+    <label for="salary">Salary </label>
+    <input type="text" id="salary" :field="*{salary}" placeholder="Salary  ..">
+    <div style="color: #ff0026" :if="${#fields.hasErrors('salary')}" :errors="*{salary}"></div>
+
+    <label for="position" >Position  :</label>
+    <select  id="position" :field="*{position}" >
+      <option :each="position : ${positionList}"
+              :text="${position.name}"
+              :value="${position.id}"></option>
+    </select>
+
+    <label for="division" >Division  :</label>
+    <select  id="division" :field="*{division}" >
+      <option :each="division : ${divisionList}"
+              :text="${division.name}"
+              :value="${division.id}"></option>
+    </select>
+
+    <label for="education" >Education  :</label>
+    <select  id="education" :field="*{education}" >
+      <option :each="education : ${educationList}"
+              :text="${education.name}"
+              :value="${education.id}"></option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
