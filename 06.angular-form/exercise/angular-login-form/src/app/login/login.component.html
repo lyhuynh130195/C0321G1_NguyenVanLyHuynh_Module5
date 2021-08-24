@@ -1,0 +1,13 @@
+<h1>Login Form</h1>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <label for="email">Email</label>
+  <input id = "email" formControlName="email" type="email">
+  <div style="color: red" *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">Email invalid</div>
+
+  <label for="password">Email</label>
+  <input id = "password" formControlName="password" type="text">
+  <div style="color: red" *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">Password invalid</div>
+
+  <button type="submit">Submit</button>
+</form>
+<div >{{ successLogin}}</div>

@@ -17,6 +17,7 @@ import { ListContractComponent } from './contract/list-contract/list-contract.co
 import { CreateContractComponent } from './contract/create-contract/create-contract.component';
 import { EditContractComponent } from './contract/edit-contract/edit-contract.component';
 import { ViewEmployeeComponent } from './employee/view-employee/view-employee.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -37,9 +38,10 @@ import { ViewEmployeeComponent } from './employee/view-employee/view-employee.co
     EditContractComponent,
     ViewEmployeeComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        NgxPaginationModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

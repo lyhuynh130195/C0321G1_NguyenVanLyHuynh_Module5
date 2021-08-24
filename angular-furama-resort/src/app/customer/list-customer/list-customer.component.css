@@ -1,0 +1,16 @@
+#search-and-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 130px;
+}
+
+#item2 {
+  position: relative;
+  top: 25px;
+}
+
+.item-search{
+  background-color: #34ce57;
+  color: white;
+  border: #34ce57;
+}

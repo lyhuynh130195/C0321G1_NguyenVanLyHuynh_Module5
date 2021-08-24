@@ -1,0 +1,44 @@
+<h1 style="text-align: center">Form Đăng Kí</h1>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="col-md-6" id="form">
+  <label for="email">Email</label>
+  <input formControlName="email" type="email" class="form-control" id="email">
+<!--  <div style="color: red" *ngIf="registerForm.controls.email.invalid && registerForm.controls.email.touched">Email invalid</div>-->
+  <div style="color: red" *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">Email invalid</div>
+
+  <fieldset formGroupName="pwGroup">
+    <label for="password">Password</label>
+    <input formControlName="password" type="text" class="form-control" id="password">
+    <label for="confirmPass">Confirm Password</label>
+    <input formControlName="confirmPassword" type="text" class="form-control" id="confirmPass">
+  </fieldset>
+  <div style="color: red" *ngIf="registerForm.hasError('notMatch','pwGroup')
+     && registerForm.get('pwGroup').touched">Password not match</div>
+
+  <label for="country">Country</label>
+  <select id="country" class="form-control" formControlName="country">
+    <option *ngFor="let str of listCountry;index as i">{{str}}</option>
+    <div style="color: red" *ngIf="registerForm.get('country').invalid && registerForm.get('country').touched">Country invalid</div>
+
+  </select>
+
+  <label for="age">Age</label>
+  <input formControlName="age" type="number" class="form-control" id="age">
+  <div style="color: red" *ngIf="registerForm.get('age').invalid && registerForm.get('age').touched">Age invalid</div>
+
+
+  <label for="radiobuton">Gender</label>
+  <div *ngFor="let gender of listGender" class="form-control" id="radiobuton">
+      <input type="radio" id="gender" formControlName="gender" value="{{gender}}">
+      <label for="gender">{{gender}}</label><br>
+  </div>
+  <div style="color: red" *ngIf="registerForm.get('gender').invalid && registerForm.get('gender').touched">Gender invalid</div>
+
+
+  <label for="phone">Phone</label>
+  <input formControlName="phone" type="text" class="form-control" id="phone">
+  <div style="color: red" *ngIf="registerForm.get('phone').invalid && registerForm.get('phone').touched">Phone invalid</div>
+
+
+  <button type="submit" class="btn-success" style="margin-top: 10px" [disabled]="registerForm.invalid" >Submit</button>
+</form>

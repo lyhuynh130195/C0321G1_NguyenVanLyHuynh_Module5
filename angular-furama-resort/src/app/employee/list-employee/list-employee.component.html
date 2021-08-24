@@ -1,34 +1,20 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head>
-  <title>Title</title>
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-  <style>
-    #search-and-title{
-      display: flex;
-      justify-content: space-between;
-      margin: 10px 130px;
-    }
-  </style>
-</head>
-<body>
-<div th:insert="layout/header"></div>
+
+
 
 <div id="search-and-title">
   <div id="items1">
     <h2 style="color: #34ce57;position: relative;margin-top: 20px" >EMPLOYEE LIST</h2>
   </div>
   <div id="item2">
-    <form th:action="@{/employee/list}" id="item2-search">
-      <label><input type="text" th:name="keyword" placeholder="Enter employee name"></label>
+    <form  id="item2-search">
+      <label><input type="text" name="keyword" placeholder="Enter employee name"></label>
       <label><input type="submit" value="Search" class="item-search"></label>
     </form>
   </div>
 </div>
-<div  th:if="${success}" style="position: relative;margin: 10px 130px">
-  <strong id="message" th:text="${success}" style="color: limegreen;margin-bottom: 10px"></strong>
-</div>
+<!--<div  th:if="${success}" style="position: relative;margin: 10px 130px">-->
+<!--  <strong id="message" th:text="${success}" style="color: limegreen;margin-bottom: 10px"></strong>-->
+<!--</div>-->
 <div class="container">
   <table class="table table-hover">
     <thead>
@@ -47,75 +33,59 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="employee,index :${employeeList}">
-      <th scope="row" th:text="${index.index+1}"></th>
-      <td th:text="${employee.name}"></td>
-      <td th:text="${employee.birthday}"></td>
-      <td th:text="${employee.idCard}"></td>
-      <td th:text="${employee.phone}"></td>
-      <td th:text="${employee.email}"></td>
-      <td th:text="${employee.address}"></td>
-      <td th:text="${employee.position.name}"></td>
-      <td><a class="btn btn-primary" role="button" th:href="@{/employee/{id}/edit(id=${employee.id})}">Edit</a></td>
-      <td>
-        <button th:dataId="${employee.id}" th:dataName="${employee.name}"
-                onclick="onDelete(this.getAttribute('dataId'),this.getAttribute('dataName'))" type="button" class="btn btn-danger" data-toggle="modal"
-                data-target="#exampleModal">Delete
-        </button>
-      </td>
-      <td><a class="btn btn-primary" role="button" th:href="@{/employee/{id}/view(id=${employee.id})}">View</a></td>
+    <tr *ngFor="let employee of listEmployee| paginate: {itemsPerPage: 3, currentPage: p },index as i">
+      <th scope="row" >{{ i + 1}}</th>
+      <td>{{employee.name}}</td>
+      <td>{{employee.birthday}}</td>
+      <td>{{employee.idCard}}</td>
+      <td>{{employee.phone}}</td>
+      <td>{{employee.email}}</td>
+      <td>{{employee.address}}</td>
+      <td>{{employee.position}}</td>
+
+      <td><a class="btn btn-primary" role="button">Edit</a></td>
+      <td><a class="btn btn-danger" role="button">Delete</a></td>
+      <td><a class="btn btn-primary" role="button">View</a></td>
+
     </tr>
     </tbody>
   </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
 
-<div class="container">
-  <nav aria-label="Page navigation example">
-    <ul class="pagination">
-      <li class="page-item"><a class="page-link" th:href="@{/employee/list(page=${employeeList.number - 1},keyword=${keywordValue})}"
-                               th:if="${employeeList.hasPrevious()}">Previous</a></li>
-      <li class="page-item" th:each="pageNo : ${#numbers.sequence(0, employeeList.totalPages - 1)}">
-        <a class="page-link" th:href="@{/employee/list(page = ${pageNo},keyword=${keywordValue})}"
-           th:text="${pageNo + 1} "></a>
-      </li>
-      <li class="page-item"><a class="page-link" th:href="@{/employee/list(page=${employeeList.number + 1},keyword=${keywordValue})}"
-                               th:if="${employeeList.hasNext()}">Next</a></li>
-    </ul>
-  </nav>
-</div>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confirm delete</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form  action="/employee/delete" method="post">
-        <div class="modal-body">
-          Bạn có chắc chắn muốn xóa ?
-        </div>
-        <input type="hidden" name="action" value="delete">
-        <input type="hidden" name="id" value="" id="employeeDel">
-        <input type="text" name="name" value="" id="employeeDelName" readonly>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
-          <button type="submit" class="btn btn-primary">Có</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"-->
+<!--     aria-hidden="true">-->
+<!--  <div class="modal-dialog" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLabel">Confirm delete</h5>-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <form  action="/employee/delete" method="post">-->
+<!--        <div class="modal-body">-->
+<!--          Bạn có chắc chắn muốn xóa ?-->
+<!--        </div>-->
+<!--        <input type="hidden" name="action" value="delete">-->
+<!--        <input type="hidden" name="id" value="" id="employeeDel">-->
+<!--        <input type="text" name="name" value="" id="employeeDelName" readonly>-->
 
-<script>
-  function onDelete(id,name) {
-    document.getElementById("employeeDel").value = id;
-    document.getElementById("employeeDelName").value = name;
-  }
-</script>
+<!--        <div class="modal-footer">-->
+<!--          <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>-->
+<!--          <button type="submit" class="btn btn-primary">Có</button>-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
-</body>
-</html>
+<!--<script>-->
+<!--  function onDelete(id,name) {-->
+<!--    document.getElementById("employeeDel").value = id;-->
+<!--    document.getElementById("employeeDelName").value = name;-->
+<!--  }-->
+<!--</script>-->
+
+

@@ -1,36 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head>
-  <title>Title</title>
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-  <style>
-    #search-and-title{
-      display: flex;
-      justify-content: space-between;
-      margin: 10px 130px;
-    }
-  </style>
 
-</head>
-<body>
-
-<div th:insert="layout/header"></div>
 
 <div id="search-and-title">
   <div id="items1">
     <h2 style="color: #34ce57;position: relative;margin-top: 20px" >SERVICE LIST</h2>
   </div>
   <div id="item2">
-    <form th:action="@{/service/list}" id="item2-search">
-      <label><input type="text" th:name="keyword" placeholder="Enter service name"></label>
+    <form  id="item2-search">
+      <label><input type="text" name="keyword" placeholder="Enter service name"></label>
       <label><input type="submit" value="Search" class="item-search"></label>
     </form>
   </div>
 </div>
-<div  th:if="${success}" style="position: relative;margin: 10px 130px">
-  <strong id="message" th:text="${success}" style="color: limegreen;margin-bottom: 10px"></strong>
-</div>
+<!--<div  th:if="${success}" style="position: relative;margin: 10px 130px">-->
+<!--  <strong id="message" th:text="${success}" style="color: limegreen;margin-bottom: 10px"></strong>-->
+<!--</div>-->
 
 
 <div class="container">
@@ -54,74 +37,50 @@
     </thead>
     <tbody>
 
-    <tr th:each="service,index :${serviceList}">
-      <th scope="row" th:text="${index.index+1}"></th>
-      <td th:text="${service.id}"></td>
-      <td th:text="${service.name}"></td>
-      <td th:text="${service.code}"></td>
-      <td th:text="${service.area}"></td>
-      <td th:text="${service.cost}"></td>
-      <td th:text="${service.rentType.name}"></td>
-      <td th:text="${service.serviceType.name}"></td>
-      <td th:text="${service.poolArea}"></td>
-      <td th:text="${service.numberOfFloors}"></td>
-
-      <td><a class="btn btn-primary" role="button" th:href="@{/service/{id}/edit(id=${service.id})}">Edit</a></td> <td>
-      <button  th:onclick="|onDelete( '${service.id}')|" type="button" class="btn btn-danger" data-toggle="modal"
-               data-target="#exampleModal">Delete
-      </button>
-    </td>
+    <tr *ngFor="let service of listService| paginate: {itemsPerPage: 3, currentPage: p },index as i">
+      <th scope="row" >{{ i + 1 }}</th>
+      <td>{{service.id }}</td>
+      <td>{{service.name }}</td>
+      <td>{{service.code }}</td>
+      <td>{{service.area }}</td>
+      <td>{{service.cost }}</td>
+      <td>{{service.rentType }}</td>
+      <td>{{service.serviceType }}</td>
+      <td>{{service.poolArea }}</td>
+      <td>{{service.numberOfFloor }}</td>
+      <td><a class="btn btn-primary" role="button" >Edit</a></td>
+      <td><a class="btn btn-danger" role="button" >Delete</a></td>
 
     </tr>
     </tbody>
   </table>
-</div>
-
-<div class="container">
-  <nav aria-label="Page navigation example">
-    <ul class="pagination">
-      <li class="page-item"><a class="page-link" th:href="@{/service/list(page=${serviceList.number - 1},keyword=${keywordValue})}"
-                               th:if="${serviceList.hasPrevious()}">Previous</a></li>
-      <li class="page-item" th:each="pageNo : ${#numbers.sequence(0, serviceList.totalPages - 1)}">
-        <a class="page-link" th:href="@{/customer/list(page = ${pageNo},keyword=${keywordValue})}"
-           th:text="${pageNo + 1} "></a>
-      </li>
-      <li class="page-item"><a class="page-link" th:href="@{/service/list(page=${serviceList.number + 1},keyword=${keywordValue})}"
-                               th:if="${serviceList.hasNext()}">Next</a></li>
-    </ul>
-  </nav>
-</div>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confirm delete</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form  action="/service/delete" method="post">
-        <input type="hidden" name="action" value="delete">
-        <input type="hidden" name="id" value="" id="serviceDel">
-        <div class="modal-body">
-          Bạn có chắc chắn muốn xóa ?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
-          <button type="submit" class="btn btn-primary">Có</button>
-        </div>
-      </form>
-    </div>
-  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
 
 
-<script>
-  function onDelete(id) {
-    document.getElementById("serviceDel").value = id;
-  }
-</script>
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"-->
+<!--     aria-hidden="true">-->
+<!--  <div class="modal-dialog" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLabel">Confirm delete</h5>-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <form  action="/service/delete" method="post">-->
+<!--        <input type="hidden" name="action" value="delete">-->
+<!--        <input type="hidden" name="id" value="" id="serviceDel">-->
+<!--        <div class="modal-body">-->
+<!--          Bạn có chắc chắn muốn xóa ?-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--          <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>-->
+<!--          <button type="submit" class="btn btn-primary">Có</button>-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
-</body>
-</html>
+
