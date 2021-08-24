@@ -18,6 +18,7 @@ import { CreateContractComponent } from './contract/create-contract/create-contr
 import { EditContractComponent } from './contract/edit-contract/edit-contract.component';
 import { ViewEmployeeComponent } from './employee/view-employee/view-employee.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,10 +39,11 @@ import {NgxPaginationModule} from 'ngx-pagination';
     EditContractComponent,
     ViewEmployeeComponent
   ],
-    imports: [
-        BrowserModule,
-        NgxPaginationModule
-    ],
+  imports: [
+    BrowserModule,
+    NgxPaginationModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
