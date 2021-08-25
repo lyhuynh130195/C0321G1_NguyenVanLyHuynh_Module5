@@ -1,64 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Create Customer</title>
+<div><h1 style="color: #34ce57;text-align: center">Edit Customer</h1></div>
+<div class="container">
+  <form [formGroup]="editCustomerForm" (ngSubmit)="onSubmit()">
+    <input type="hidden" formControlName="id" >
+    <div class="form-group">
+      <label for="code">Customer Code</label>
+      <input type="text" id="code" class="form-control" formControlName="code" placeholder="Customer code..">
+      <div style="color: #ff0026"
+           *ngIf="editCustomerForm.get('code').invalid && editCustomerForm.get('code').touched">Code invalid
+      </div>
+    </div>
 
-</head>
-<body>
+    <div class="form-group">
+      <label for="name">Customer Name</label>
+      <input type="text" id="name" class="form-control" formControlName="name" placeholder="Customer name..">
+      <div style="color: #ff0026"
+           *ngIf="editCustomerForm.get('name').invalid && editCustomerForm.get('name').touched">Name invalid
+      </div>
+    </div>
 
-<div><h1 style="color: #34ce57;text-align: center">Create Customer</h1></div>
-<div id="form">
-  <form>
+    <div class="form-group">
+      <label for="birthday">Birthday </label>
+      <input class="form-control" type="date" formControlName="birthday" id="birthday" placeholder="Birthday ..">
+      <div style="color: #ff0026"
+           *ngIf="editCustomerForm.get('birthday').invalid && editCustomerForm.get('birthday').touched">Birthday
+        invalid
+      </div>
+    </div>
 
-    <label for="code">Customer Code</label>
-    <input type="text" id="code"  placeholder="Customer code..">
-    <div style="color: #ff0026" ></div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select id="gender" formControlName="gender" class="form-control">
+        <option value="Male">Male</option>
+        <option value="Flame">Flame</option>
+        <option value="Other">Other</option>
+      </select>
+      <div style="color: #ff0026"
+           *ngIf="editCustomerForm.get('gender').invalid && editCustomerForm.get('gender').touched">Gender invalid
+      </div>
+    </div>
 
+    <div class="form-group">
+      <label for="idCard">IDCard </label>
+      <input type="text" id="idCard" class="form-control" formControlName="idCard" placeholder="IDCard ..">
+      <div style="color: #ff0026"
+           *ngIf="editCustomerForm.get('idCard').invalid && editCustomerForm.get('idCard').touched">Id-card invalid
+      </div>
+    </div>
 
-    <label for="name">Customer Name</label>
-    <input type="text" id="name"  placeholder="Customer name..">
-    <div style="color: #ff0026" ></div>
+    <div class="form-group">
+      <label for="phone">Number Phone </label>
+      <input type="text" id="phone" class="form-control" formControlName="phone" placeholder="Number Phone ..">
+      <div style="color: #ff0026"
+           *ngIf="editCustomerForm.get('phone').invalid && editCustomerForm.get('phone').touched">Number phone
+        invalid
+      </div>
+    </div>
 
+    <div class="form-group">
+      <label for="email">Email </label>
+      <input type="text" id="email" class="form-control" formControlName="email" placeholder="Email  ..">
+      <div style="color: #ff0026"
+           *ngIf="editCustomerForm.get('email').invalid && editCustomerForm.get('email').touched">Email invalid
+      </div>
+    </div>
 
-    <label for="birthday">Birthday </label>
-    <input class="form-control" type="date" id="birthday"  placeholder="Birthday ..">
-    <div style="color: #ff0026" ></div>
+    <div class="form-group">
+      <label for="address">Address </label>
+      <input type="text" formControlName="address" id="address" class="form-control" placeholder="Address  ..">
+      <div style="color: #ff0026"
+           *ngIf="editCustomerForm.get('address').invalid && editCustomerForm.get('address').touched">Address
+        invalid
+      </div>
+    </div>
 
-    <div for="gender">Gender</div>
-    <select id="gender" >
-      <option value="Male">Male</option>
-      <option value="Flame">Flame</option>
-      <option value="Other">Other</option>
-    </select>
-
-    <label for="idCard">IDCard </label>
-    <input type="text" id="idCard"  placeholder="IDCard ..">
-    <div style="color: #ff0026" ></div>
-
-
-    <label for="phone">Number Phone </label>
-    <input type="text" id="phone" placeholder="Number Phone ..">
-    <div style="color: #ff0026" ></div>
-
-
-    <label for="email">Email </label>
-    <input type="text" id="email"  placeholder="Email  ..">
-    <div style="color: #ff0026" ></div>
-
-
-    <label for="address">Address </label>
-    <input type="text" id="address"  placeholder="Address  ..">
-
-    <label for="customerType" >Customer Type :</label>
-    <select  id="customerType"  >
-      <option ></option>
-
-    </select>
-
-    <input type="submit" value="Submit">
+    <div class="form-group">
+      <label for="customerType">Customer Type :</label>
+      <select id="customerType" formControlName="type" class="form-control">
+        <option>Diamond</option>
+        <option>Platinum</option>
+        <option>Gold</option>
+        <option>Silver</option>
+      </select>
+    </div>
+    <button type="submit" class="btn-success" [disabled]="editCustomerForm.invalid">Submit</button>
   </form>
 </div>
 
-</body>
-</html>
+

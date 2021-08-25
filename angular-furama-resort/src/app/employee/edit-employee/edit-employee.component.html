@@ -1,70 +1,73 @@
+<div><h1 style="color: #34ce57;text-align: center">Edit Employee</h1></div>
+<div class="container">
+  <form [formGroup]="editEmployee" (ngSubmit)="onSubmit()">
+    <input type="hidden" formControlName="id">
+    <div class="form-group">
+      <label for="name">Employee Name</label>
+      <input type="text" id="name" class="form-control" formControlName="name" placeholder="Customer name..">
+      <div style="color: red" *ngIf="editEmployee.get('name').invalid && editEmployee.get('name').touched">Name invalid</div>
+    </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Employee</title>
+    <div class="form-group">
+      <label for="birthday">Birthday </label>
+      <input class="form-control" type="date" id="birthday" formControlName="birthday" placeholder="Birthday ..">
+      <div style="color: red" *ngIf="editEmployee.get('birthday').invalid && editEmployee.get('birthday').touched">Birthday invalid</div>
+    </div>
 
-</head>
-<body>
+    <div  class="form-group">
+      <label for="idCard">IDCard </label>
+      <input type="text" id="idCard" formControlName="idCard" class="form-control" placeholder="IDCard ..">
+      <div style="color: red" *ngIf="editEmployee.get('idCard').invalid && editEmployee.get('idCard').touched">IdCard invalid</div>
+    </div>
 
-<div><h1 style="color: #34ce57;text-align: center">Create Employee</h1></div>
-<div id="form">
-  <form action="@{/employee/save}" method="post" :object="${employeeDto}">
-    <label for="name">Employee Name</label>
-    <input type="text" id="name" field="*{name}" placeholder="Customer name..">
+    <div  class="form-group">
+      <label for="phone">Number Phone </label>
+      <input type="text" id="phone" class="form-control" formControlName="phone" placeholder="Number Phone ..">
+      <div style="color: red" *ngIf="editEmployee.get('phone').invalid && editEmployee.get('phone').touched">Phone invalid</div>
+    </div>
 
-    <label for="birthday">Birthday </label>
-    <input class="form-control" type="date" id="birthday" field="*{birthday}" placeholder="Birthday ..">
-    <div style="color: #ff0026" if="${#fields.hasErrors('birthday')}" errors="*{birthday}"></div>
+    <div  class="form-group">
+      <label for="email">Email </label>
+      <input type="text" id="email" class="form-control" formControlName="email" placeholder="Email  ..">
+      <div style="color: red" *ngIf="editEmployee.get('email').invalid && editEmployee.get('email').touched">Email invalid</div>
+    </div>
 
+    <div  class="form-group">
+      <label for="address">Address </label>
+      <input type="text" id="address" class="form-control" formControlName="address" placeholder="Address  ..">
+      <div style="color: red" *ngIf="editEmployee.get('address').invalid && editEmployee.get('address').touched">Address invalid</div>
+    </div>
 
-    <label for="idCard">IDCard </label>
-    <input type="text" id="idCard" :field="*{idCard}" placeholder="IDCard ..">
-    <div style="color: #ff0026" :if="${#fields.hasErrors('idCard')}" :errors="*{idCard}"></div>
+    <div  class="form-group">
+      <label for="salary">Salary </label>
+      <input type="text" id="salary" class="form-control" formControlName="salary" placeholder="Salary  ..">
+      <div style="color: red" *ngIf="editEmployee.get('salary').invalid && editEmployee.get('salary').touched">Salary invalid</div>
+    </div>
 
+    <div  class="form-group">
+      <label for="position">Position :</label>
+      <select id="position" class="form-control" formControlName="position">
+        <option></option>
+      </select>
+    </div>
 
-    <label for="phone">Number Phone </label>
-    <input type="text" id="phone" :field="*{phone}" placeholder="Number Phone ..">
-    <div style="color: #ff0026" :if="${#fields.hasErrors('phone')}" :errors="*{phone}"></div>
+    <div  class="form-group">
+      <label for="division">Division :</label>
+      <select id="division" class="form-control" formControlName="division">
+        <option></option>
+      </select>
+    </div>
 
-
-    <label for="email">Email </label>
-    <input type="text" id="email" :field="*{email}" placeholder="Email  ..">
-    <div style="color: #ff0026" :if="${#fields.hasErrors('email')}" :errors="*{email}"></div>
-
-
-    <label for="address">Address </label>
-    <input type="text" id="address" :field="*{address}" placeholder="Address  ..">
-
-    <label for="salary">Salary </label>
-    <input type="text" id="salary" :field="*{salary}" placeholder="Salary  ..">
-    <div style="color: #ff0026" :if="${#fields.hasErrors('salary')}" :errors="*{salary}"></div>
-
-    <label for="position" >Position  :</label>
-    <select  id="position" :field="*{position}" >
-      <option :each="position : ${positionList}"
-              :text="${position.name}"
-              :value="${position.id}"></option>
-    </select>
-
-    <label for="division" >Division  :</label>
-    <select  id="division" :field="*{division}" >
-      <option :each="division : ${divisionList}"
-              :text="${division.name}"
-              :value="${division.id}"></option>
-    </select>
-
-    <label for="education" >Education  :</label>
-    <select  id="education" :field="*{education}" >
-      <option :each="education : ${educationList}"
-              :text="${education.name}"
-              :value="${education.id}"></option>
-    </select>
-
-    <input type="submit" value="Submit">
+    <div  class="form-group">
+      <label for="education">Education :</label>
+      <select id="education" class="form-control" formControlName="education">
+        <!--        <option :each="education : ${educationList}"-->
+        <!--                :text="${education.name}"-->
+        <!--                :value="${education.id}"></option>-->
+        <option></option>
+      </select>
+    </div>
+    <button type="submit" class="btn-success" [disabled]="editEmployee.invalid">Submit</button>
   </form>
 </div>
-</body>
-</html>
 

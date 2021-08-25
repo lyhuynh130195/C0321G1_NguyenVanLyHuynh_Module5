@@ -9,10 +9,12 @@
   <fieldset formGroupName="pwGroup">
     <label for="password">Password</label>
     <input formControlName="password" type="text" class="form-control" id="password">
+    <div style="color: red" *ngIf="registerForm.get('pwGroup.password').invalid && registerForm.get('pwGroup.password').touched">password invalid</div>
+
     <label for="confirmPass">Confirm Password</label>
     <input formControlName="confirmPassword" type="text" class="form-control" id="confirmPass">
   </fieldset>
-  <div style="color: red" *ngIf="registerForm.hasError('notMatch','pwGroup')
+  <div style="color: red" *ngIf="registerForm.controls.pwGroup.hasError('notMatch')
      && registerForm.get('pwGroup').touched">Password not match</div>
 
   <label for="country">Country</label>
@@ -40,5 +42,5 @@
   <div style="color: red" *ngIf="registerForm.get('phone').invalid && registerForm.get('phone').touched">Phone invalid</div>
 
 
-  <button type="submit" class="btn-success" style="margin-top: 10px" [disabled]="registerForm.invalid" >Submit</button>
+  <button type="submit" class="btn-success" style="margin-top: 10px"  >Submit</button>
 </form>

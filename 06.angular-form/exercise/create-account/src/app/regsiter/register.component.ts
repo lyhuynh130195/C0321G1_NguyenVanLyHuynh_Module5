@@ -1,10 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
-function comparePassword(p : AbstractControl){
-  const v = p.value;
-  return (v.password === v.confirmPassword) ? null : {notMatch : true}
-}
 
 @Component({
   selector: 'app-regsiter',
@@ -25,9 +21,9 @@ export class RegisterComponent implements OnInit {
     this.registerForm = this.fb.group({
         email: ["",[Validators.required,Validators.email]],
         pwGroup:  this.fb.group({
-          password :"",
+          password :["",Validators.minLength(6)],
           confirmPassword:""
-        },comparePassword),
+        },this.comparePassword),
         country: ["",Validators.required],
         age: ["",[Validators.required,Validators.min(18)]],
         gender: ["",Validators.required],
@@ -37,7 +33,12 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.registerForm.value);
+    console.log(this.registerForm);
+  }
+
+   comparePassword(p : AbstractControl):any{
+    const v = p.value;
+    return (v.password === v.confirmPassword) ? null : {notMatch : true}
   }
 
 

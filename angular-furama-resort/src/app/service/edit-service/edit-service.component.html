@@ -1,73 +1,95 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head>
-  <meta charset="UTF-8">
-  <title>Service</title>
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-</head>
-<body>
-<div th:insert="layout/header"></div>
 <div><h1 style="color: #34ce57;text-align: center">Edit Service</h1></div>
-<div id="form">
-  <form th:action="@{/service/update}" method="post" th:object="${serviceDto}">
-    <input type="hidden" th:field="*{id}">
-    <label for="name">Service Name</label>
-    <input type="text" id="name" th:field="*{name}" placeholder="Service name..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+<div class="container">
+  <form [formGroup]="editService" (ngSubmit)="onSubmit()">
+    <input type="hidden" formControlName="id">
+    <div class="form-group">
+      <label for="name">Service Name</label>
+      <input type="text" id="name" class="form-control" formControlName="name" placeholder="Service name..">
+      <div style="color: #ff0026"
+           *ngIf="editService.get('name').invalid && editService.get('name').touched">Name invalid
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="code">Code </label>
+      <input type="text" id="code" class="form-control" formControlName="code" placeholder="Code ..">
+      <div style="color: #ff0026"
+           *ngIf="editService.get('code').invalid && editService.get('code').touched">Code invalid
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="area">Service Area </label>
+      <input class="form-control" type="number" id="area" formControlName="area" placeholder="Service Area ..">
+      <div style="color: #ff0026"
+           *ngIf="editService.get('area').invalid && editService.get('area').touched">Service Area invalid
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cost">Cost </label>
+      <input type="text" id="cost" class="form-control" formControlName="cost" placeholder="Cost ..">
+      <div style="color: #ff0026"
+           *ngIf="editService.get('cost').invalid && editService.get('cost').touched">Cost invalid
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="maxPeople">Max People </label>
+      <input type="text" id="maxPeople" class="form-control" formControlName="maxPeople" placeholder="Max People ..">
+      <div style="color: #ff0026"
+           *ngIf="editService.get('maxPeople').invalid && editService.get('maxPeople').touched">Max People invalid
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="poolArea">Pool Area </label>
+      <input type="text" id="poolArea" class="form-control" formControlName="poolArea" placeholder="Pool Area  ..">
+      <div style="color: #ff0026"
+           *ngIf="editService.get('poolArea').invalid && editService.get('poolArea').touched">Pool Area invalid
+      </div>
+    </div>
 
-    <label for="code">Code </label>
-    <input type="text" id="code" th:field="*{code}" placeholder="Code ..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></div>
+    <div class="form-group">
+      <label for="numberOfFloors">Number Of Floors</label>
+      <input type="text" id="numberOfFloors" class="form-control" formControlName="numberOfFloors"
+             placeholder="Number Of Floors ..">
+      <div style="color: #ff0026"
+           *ngIf="editService.get('numberOfFloors').invalid && editService.get('numberOfFloors').touched">Number Of
+        Floors invalid
+      </div>
+    </div>
 
-    <label for="area">Service Area </label>
-    <input class="form-control" type="number" id="area" th:field="*{area}" placeholder="Service Area ..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('area')}" th:errors="*{area}"></div>
+    <div class="form-group">
+      <label for="standardRoom">StandardRoom </label>
+      <input type="text" id="standardRoom" class="form-control" formControlName="standardRoom"
+             placeholder="StandardRoom  ..">
+      <div style="color: #ff0026"
+           *ngIf="editService.get('standardRoom').invalid && editService.get('standardRoom').touched">StandardRoom
+        invalid
+      </div>
+    </div>
 
+    <div class="form-group">
+      <label for="description">Description </label>
+      <input type="text" id="description" class="form-control" formControlName="description"
+             placeholder="Description  ..">
+      <div style="color: #ff0026"
+           *ngIf="editService.get('description').invalid && editService.get('description').touched">Description invalid
+      </div>
+    </div>
 
-    <label for="cost">Cost </label>
-    <input type="text" id="cost" th:field="*{cost}" placeholder="Cost ..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}"></div>
+    <!--    <div class="form-group">-->
+    <!--      <label for="rentType" >RentType  :</label>-->
+    <!--      <select  id="rentType" class="form-control" formControlName="rentType" >-->
+    <!--       <option></option>-->
+    <!--      </select>-->
+    <!--    -->
+    <!--    </div>-->
 
+    <!--    <div class="form-group">-->
+    <!--      <label for="serviceType" >Service Type :</label>-->
+    <!--      <select  id="serviceType" class="form-control" formControlName="serviceType" >-->
+    <!--        <option></option>-->
+    <!--      </select>-->
+    <!--    </div>-->
 
-
-    <label for="maxPeople">Max People </label>
-    <input type="text" id="maxPeople" th:field="*{maxPeople}" placeholder="Max People ..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('maxPeople')}" th:errors="*{maxPeople}"></div>
-
-    <label for="poolArea">Pool Area </label>
-    <input type="text" id="poolArea" th:field="*{poolArea}" placeholder="Pool Area  ..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('poolArea')}" th:errors="*{poolArea}"></div>
-
-    <label for="numberOfFloors">Number Of Floors</label>
-    <input type="text" id="numberOfFloors" th:field="*{numberOfFloors}" placeholder="Number Of Floors ..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('numberOfFloors')}" th:errors="*{numberOfFloors}"></div>
-
-    <label for="standardRoom">StandardRoom </label>
-    <input type="text" id="standardRoom" th:field="*{standardRoom}" placeholder="StandardRoom  ..">
-
-    <label for="description">Description </label>
-    <input type="text" id="description" th:field="*{description}" placeholder="Description  ..">
-
-    <label for="rentType" >RentType  :</label>
-    <select  id="rentType" th:field="*{rentType}" >
-      <option th:each="rentType : ${rentTypeList}"
-              th:text="${rentType.name}"
-              th:value="${rentType.id}"></option>
-    </select>
-
-    <label for="serviceType" >Service Type :</label>
-    <select  id="serviceType" th:field="*{serviceType}" >
-      <option th:each="serviceType : ${serviceTypeList}"
-              th:text="${serviceType.name}"
-              th:value="${serviceType.id}"></option>
-    </select>
-
-    <input type="submit" value="Submit">
+    <button type="submit" class="btn-success" [disabled]="editService.invalid">Submit</button>
   </form>
 </div>
-<script src="/jquery/jquery-3.5.1.min.js"></script>
-<script src="/jquery/popper.min.js"></script>
-<script src="/js/bootstrap.js"></script>
-</body>
-</html>
+

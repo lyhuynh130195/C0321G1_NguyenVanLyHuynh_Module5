@@ -1,52 +1,61 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head>
-  <meta charset="UTF-8">
-  <title>Create Contract</title>
-</head>
-<body>
-<div th:insert="layout/header"></div>
 <div><h1 style="color: #34ce57;text-align: center">Create Contract</h1></div>
-<div id="form">
-  <form th:action="@{/contract/save}" method="post" th:object="${contractDto}">
+<div class="container">
+  <form [formGroup]="createContract" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="startDate">Start Date </label>
+      <input class="form-control" type="date" id="startDate" formControlName="startDate" placeholder="startDate ..">
+      <div style="color: red" *ngIf="createContract.get('startDate').invalid && createContract.get('startDate').touched">
+        StartDate invalid
+      </div>
+    </div>
 
-    <label for="startDate">Start Date </label>
-    <input class="form-control" type="date" id="startDate" th:field="*{startDate}" placeholder="startDate ..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></div>
+    <div class="form-group">
+      <label for="endDate">End Date </label>
+      <input class="form-control" type="date" id="endDate" formControlName="endDate" placeholder="endDate ..">
+      <div style="color: red" *ngIf="createContract.get('endDate').invalid && createContract.get('endDate').touched">
+        EndDate invalid
+      </div>
+    </div>
 
-    <label for="endDate">End Date </label>
-    <input class="form-control" type="date" id="endDate" th:field="*{endDate}" placeholder="endDate ..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></div>
+    <div class="form-group">
+      <label for="deposit">Deposit </label>
+      <input type="number" id="deposit" class="form-control" formControlName="deposit" placeholder="deposit ..">
+      <div style="color: red" *ngIf="createContract.get('deposit').invalid && createContract.get('deposit').touched">
+        Deposit invalid
+      </div>
+    </div>
 
+    <div class="form-group">
+      <label for="customer">Customer :</label>
+      <select id="customer" class="form-control" formControlName="customer">
+        <option></option>
+      </select>
+      <div style="color: red" *ngIf="createContract.get('customer').invalid && createContract.get('customer').touched">
+        Customer invalid
+      </div>
+    </div>
 
-    <label for="deposit">Deposit </label>
-    <input type="number" id="deposit" th:field="*{deposit}" placeholder="deposit ..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"></div>
+    <div class="form-group">
+      <label for="employee">Employee :</label>
+      <select id="employee" class="form-control" formControlName="employee">
+        <option></option>
+      </select>
+      <div style="color: red" *ngIf="createContract.get('employee').invalid && createContract.get('employee').touched">
+        Employee invalid
+      </div>
+    </div>
 
-    <label for="customer" >Customer :</label>
-    <select  id="customer" th:field="*{customer}" >
-      <option th:each="customer : ${customerList}"
-              th:text="${customer.name}"
-              th:value="${customer.id}"></option>
-    </select>
+    <div class="form-group">
+      <label for="service">Service :</label>
+      <select id="service" class="form-control" formControlName="service">
+        <option></option>
+      </select>
+      <div style="color: red" *ngIf="createContract.get('service').invalid && createContract.get('service').touched">
+        Employee invalid
+      </div>
+    </div>
 
-    <label for="employee" >Employee :</label>
-    <select  id="employee" th:field="*{employee}" >
-      <option th:each="employee : ${employeeList}"
-              th:text="${employee.name}"
-              th:value="${employee.id}"></option>
-    </select>
-
-    <label for="service" >Service :</label>
-    <select  id="service" th:field="*{service}" >
-      <option th:each="service : ${serviceList}"
-              th:text="${service.name}"
-              th:value="${service.id}"></option>
-    </select>
-    <input type="submit" value="Submit">
+    <button type="submit" class="btn-success" [disabled]="createContract.invalid">Submit</button>
   </form>
 </div>
 
-</body>
-</html>
