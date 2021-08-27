@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 5,
+      "name": "IPhone 11 Pro",
+      "price": 1895000,
+      "description": "Like new"
+    },
+    {
+      "id": 33,
+      "name": "Galaxy",
+      "price": 12345,
+      "description": "new"
+    },
+    {
+      "id": 123,
+      "name": "Galaxy21",
+      "price": 212121,
+      "description": "new"
+    },
+    {
+      "id": 124,
+      "name": "Galaxy s21",
+      "price": 11111,
+      "description": "1111"
+    }
+  ],
+  "category": []
+}
