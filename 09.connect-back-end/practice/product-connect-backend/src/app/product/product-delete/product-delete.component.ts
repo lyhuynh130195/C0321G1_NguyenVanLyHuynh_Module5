@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {ProductService} from '../../service/product.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
+import {CategoryService} from "../../service/category.service";
+import {Category} from "../../model/category";
 
 @Component({
   selector: 'app-product-delete',
@@ -11,6 +13,7 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 export class ProductDeleteComponent implements OnInit {
   productForm: FormGroup;
   id: number;
+
 
   constructor(private productService: ProductService,
               private activatedRoute: ActivatedRoute,
@@ -30,6 +33,7 @@ export class ProductDeleteComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   deleteProduct(id: number) {
@@ -38,4 +42,6 @@ export class ProductDeleteComponent implements OnInit {
       this.router.navigate(['/product/list']);
     }, e => console.log(e));
   }
+
+
 }
