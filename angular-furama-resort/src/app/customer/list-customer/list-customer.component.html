@@ -1,6 +1,6 @@
 <div id="search-and-title">
   <div>
-    <button class="btn-success" [routerLink]="['/customer/create']">Create</button>
+    <button class="btn-success" [routerLink]="['/customers/create']">Create</button>
   </div>
   <div id="items1">
     <h2 style="color: #34ce57">CUSTOMER LIST</h2>
@@ -47,9 +47,9 @@
       <td>{{customer.phone}}</td>
       <td>{{customer.email}}</td>
       <td>{{customer.address}}</td>
-      <td><a class="btn btn-primary" role="button" [routerLink]="['/customer/edit',customer.id]">Edit</a></td>
+      <td><a class="btn btn-primary" role="button" [routerLink]="['/customers/edit',customer.id]">Edit</a></td>
 
-      <td><a class="btn btn-danger" role="button" [routerLink]="['/customer/delete',customer.id]">Delete</a></td>
+      <td><a class="btn btn-danger" role="button" [routerLink]="['/customers/delete',customer.id]">Delete</a></td>
     </tr>
     </tbody>
   </table>
