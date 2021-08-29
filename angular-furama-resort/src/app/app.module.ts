@@ -15,6 +15,7 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {HomeComponent} from './home/home.component';
 import {HomeModule} from './home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {EmployeeRoutingModule} from './employee/employee-routing.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RouterModule,
     NavbarModule,
     HomeModule,
+    EmployeeRoutingModule,
     BrowserAnimationsModule
   ],
   providers: [],

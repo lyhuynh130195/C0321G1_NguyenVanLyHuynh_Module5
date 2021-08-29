@@ -7,5 +7,6 @@ export interface Employee {
   email: string;
   address: string;
   position: string
-
+  division:string;
+  education:string;
 }

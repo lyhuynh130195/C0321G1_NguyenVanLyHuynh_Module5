@@ -40,8 +40,8 @@
       <td> {{ contract.employeeName}}</td>
       <td> {{ contract.customerName}}</td>
       <td> {{ contract.serviceName}}</td>
-      <td><a class="btn btn-primary" role="button">Edit</a></td>
-      <td><a class="btn btn-danger" role="button">Delete</a></td>
+      <td><a class="btn btn-primary" role="button" [routerLink]="['/contract/edit:id',contract.id]" >Edit</a></td>
+      <td><a class="btn btn-danger" role="button" [routerLink]="['/contract/delete:id',contract.id]">Delete</a></td>
     </tr>
     </tbody>
   </table>

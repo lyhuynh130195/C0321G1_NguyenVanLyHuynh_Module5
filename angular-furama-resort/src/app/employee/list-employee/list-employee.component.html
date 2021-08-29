@@ -5,16 +5,15 @@
   <div id="items1">
     <h2 style="color: #34ce57;position: relative;margin-top: 20px" >EMPLOYEE LIST</h2>
   </div>
-  <div id="item2">
-    <form  id="item2-search">
-      <label><input type="text" name="keyword" placeholder="Enter employee name"></label>
-      <label><input type="submit" value="Search" class="item-search"></label>
-    </form>
-  </div>
+  <button class="btn-success" [routerLink]="['/employee/create']">Create</button>
+<!--  <div id="item2">-->
+<!--    <form  id="item2-search">-->
+<!--      <label><input type="text" name="keyword" placeholder="Enter employee name"></label>-->
+<!--      <label><input type="submit" value="Search" class="item-search"></label>-->
+<!--    </form>-->
+<!--  </div>-->
 </div>
-<!--<div  th:if="${success}" style="position: relative;margin: 10px 130px">-->
-<!--  <strong id="message" th:text="${success}" style="color: limegreen;margin-bottom: 10px"></strong>-->
-<!--</div>-->
+
 <div class="container">
   <table class="table table-hover">
     <thead>
@@ -42,10 +41,9 @@
       <td>{{employee.email}}</td>
       <td>{{employee.address}}</td>
       <td>{{employee.position}}</td>
-
-      <td><a class="btn btn-primary" role="button">Edit</a></td>
-      <td><a class="btn btn-danger" role="button">Delete</a></td>
-      <td><a class="btn btn-primary" role="button">View</a></td>
+      <td><a class="btn btn-primary" role="button" [routerLink]="['/employee/edit:id',employee.id]">Edit</a></td>
+      <td><a class="btn btn-danger" role="button" [routerLink]="['/employee/delete:id',employee.id]">Delete</a></td>
+      <td><a class="btn btn-primary" role="button" [routerLink]="['/employee/view:id',employee.id]">View</a></td>
 
     </tr>
     </tbody>

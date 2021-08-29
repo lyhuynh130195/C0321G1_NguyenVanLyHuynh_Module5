@@ -46,24 +46,27 @@
     <div  class="form-group">
       <label for="position">Position :</label>
       <select id="position" class="form-control" formControlName="position">
-       <option></option>
+       <option value="manager">manager</option>
+       <option value="manage">manage</option>
+       <option value="Staff">Staff</option>
       </select>
     </div>
 
     <div  class="form-group">
       <label for="division">Division :</label>
       <select id="division" class="form-control" formControlName="division">
-       <option></option>
+       <option value="manager">manager</option>
+       <option value="sale">sale</option>
+       <option value="receptionist">receptionist</option>
       </select>
     </div>
 
     <div  class="form-group">
       <label for="education">Education :</label>
       <select id="education" class="form-control" formControlName="education">
-<!--        <option :each="education : ${educationList}"-->
-<!--                :text="${education.name}"-->
-<!--                :value="${education.id}"></option>-->
-        <option></option>
+        <option value="university">university</option>
+        <option value="college">college</option>
+        <option value="Intermediate">Intermediate</option>
       </select>
     </div>
     <button type="submit" class="btn-success" [disabled]="creatEmployee.invalid">Submit</button>

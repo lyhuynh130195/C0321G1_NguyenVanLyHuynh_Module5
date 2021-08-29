@@ -60,5 +60,44 @@
       "address": "NA",
       "id": 5
     }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Nguyen Van Hai",
+      "birthday": "11-11-1996",
+      "idCard": "123654789",
+      "phone": "0966369666",
+      "email": "hai@gmail.com",
+      "address": "NA",
+      "position": "manager",
+      "division": "manager",
+      "education": "university"
+    },
+    {
+      "id": 2,
+      "name": "Nguyen Van AN",
+      "birthday": "11-11-1996",
+      "idCard": "123654789",
+      "phone": "0966369666",
+      "email": "hai@gmail.com",
+      "address": "NA",
+      "position": "manager",
+      "division": "manager",
+      "education": "university"
+    },
+    {
+      "name": "huynh10",
+      "birthday": "2021-08-10",
+      "idCard": "987456322222",
+      "phone": "0866326888",
+      "email": "lyh195@gmail.com",
+      "address": "NA",
+      "salary": "1000",
+      "position": "manager",
+      "division": "sale",
+      "education": "university",
+      "id": 3
+    }
   ]
 }
