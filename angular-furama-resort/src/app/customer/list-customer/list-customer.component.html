@@ -1,19 +1,20 @@
-
-
 <div id="search-and-title">
+  <div>
+    <button class="btn-success" [routerLink]="['/customer/create']">Create</button>
+  </div>
   <div id="items1">
-    <h2 style="color: #34ce57;position: relative;margin-top: 20px" >CUSTOMER LIST</h2>
+    <h2 style="color: #34ce57">CUSTOMER LIST</h2>
   </div>
 <!--  <div id="item2">-->
-<!--    <form >-->
-<!--      <label><input type="text" name="keyword" placeholder="Enter customer name or code"></label>-->
-<!--      <label><button  type="submit" class="item-search">Search</button></label>-->
-<!--    </form>-->
+<!--    <label><input type="text" formControlName="name" placeholder="Enter customer name or code"></label>-->
+<!--    <label>-->
+<!--      <button class="item-search" (click)="search()" )>Search</button>-->
+<!--    </label>-->
 <!--  </div>-->
 </div>
 
-<div  style="position: relative;margin: 10px 130px">
-  <strong id="message"  style="color: limegreen;margin-bottom: 10px"></strong>
+<div style="position: relative;margin: 10px 130px">
+  <strong id="message" style="color: limegreen;margin-bottom: 10px"></strong>
 </div>
 
 <div class="container">
@@ -36,19 +37,19 @@
     </thead>
     <tbody>
     <tr *ngFor="let customer of listCustomer| paginate: {itemsPerPage: 3, currentPage: p },index as i">
-        <th scope="row" >{{i+1}}</th>
-      <td >{{customer.code}}</td>
-      <td >{{customer.name}}</td>
-      <td >{{customer.type}}</td>
-      <td >{{customer.birthday}}</td>
-      <td >{{customer.gender}}</td>
-      <td >{{customer.idCard}}</td>
-      <td >{{customer.phone}}</td>
-      <td >{{customer.email}}</td>
-      <td >{{customer.address}}</td>
-      <td><a class="btn btn-primary" role="button">Edit</a></td>
+      <th scope="row">{{i + 1}}</th>
+      <td>{{customer.code}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.type}}</td>
+      <td>{{customer.birthday}}</td>
+      <td>{{customer.gender}}</td>
+      <td>{{customer.idCard}}</td>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.address}}</td>
+      <td><a class="btn btn-primary" role="button" [routerLink]="['/customer/edit',customer.id]">Edit</a></td>
 
-      <td><a class="btn btn-danger" role="button">Delete</a></td>
+      <td><a class="btn btn-danger" role="button" [routerLink]="['/customer/delete',customer.id]">Delete</a></td>
     </tr>
     </tbody>
   </table>
@@ -81,6 +82,7 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</div>-->
+
 
 
 

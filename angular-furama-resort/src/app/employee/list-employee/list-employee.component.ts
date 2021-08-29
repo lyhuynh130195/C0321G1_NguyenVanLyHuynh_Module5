@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Employee} from '../employee';
+import {Employee} from '../../model/employee';
 
 @Component({
   selector: 'app-list-employee',

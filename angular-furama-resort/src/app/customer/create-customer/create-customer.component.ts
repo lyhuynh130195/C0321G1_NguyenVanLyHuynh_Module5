@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {CustomerService} from '../../service-data/customer.service';
 
 @Component({
   selector: 'app-create-customer',
@@ -9,7 +10,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class CreateCustomerComponent implements OnInit {
   createCustomerForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,
+              private customerService: CustomerService) {
   }
 
   ngOnInit(): void {
@@ -27,6 +29,10 @@ export class CreateCustomerComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.createCustomerForm.value);
+    const customer = this.createCustomerForm.value
+    this.customerService.saveCustomer(customer).subscribe(() =>{
+      alert("create customer success")
+    })
+
   }
 }

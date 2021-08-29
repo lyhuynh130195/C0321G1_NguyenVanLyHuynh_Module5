@@ -1,6 +1,6 @@
 <div><h1 style="color: #34ce57;text-align: center">Edit Customer</h1></div>
 <div class="container">
-  <form [formGroup]="editCustomerForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="editCustomerForm" (ngSubmit)="onSubmit(id)">
     <input type="hidden" formControlName="id" >
     <div class="form-group">
       <label for="code">Customer Code</label>

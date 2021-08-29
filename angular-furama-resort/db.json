@@ -1,0 +1,64 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "code": "KH-1000",
+      "name": "Nguyễn Văn Ada",
+      "type": "Platinum",
+      "birthday": "10-10-1995",
+      "gender": "Male",
+      "idCard": "123443211",
+      "phone": "0968569654",
+      "email": "abc@gmail.com",
+      "address": "hn"
+    },
+    {
+      "id": 2,
+      "code": "KH-1001",
+      "name": "Nguyễn Văn B",
+      "type": "Diamond",
+      "birthday": "10-10-1995",
+      "gender": "Male",
+      "idCard": "1236987452",
+      "phone": "0966654125",
+      "email": "dac@gmail.com",
+      "address": "DN"
+    },
+    {
+      "id": 3,
+      "code": "KH-1003",
+      "name": "Nguyễn Văn C",
+      "type": "Gold",
+      "birthday": "10-10-1995",
+      "gender": "Male",
+      "idCard": "123443211",
+      "phone": "0968569654",
+      "email": "abc@gmail.com",
+      "address": "DN"
+    },
+    {
+      "id": 4,
+      "code": "KH-1004",
+      "name": "Nguyễn Văn D",
+      "type": "Gold",
+      "birthday": "10-10-1995",
+      "gender": "Male",
+      "idCard": "123443211",
+      "phone": "0968569654",
+      "email": "caf@gmail.com",
+      "address": "DN"
+    },
+    {
+      "code": "KH-1005",
+      "name": "huynh",
+      "type": "Diamond",
+      "birthday": "2021-08-17",
+      "gender": "Male",
+      "idCard": "987456322222",
+      "phone": "0866326888",
+      "email": "lyh195@gmail.com",
+      "address": "NA",
+      "id": 5
+    }
+  ]
+}
