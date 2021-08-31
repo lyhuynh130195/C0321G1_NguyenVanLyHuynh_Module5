@@ -1,0 +1,44 @@
+{
+  "tickets": [
+    {
+      "id": 2,
+      "code": "CI-1111",
+      "movie": {
+        "id": 1,
+        "name": "ABC"
+      },
+      "dateWatch": "11-11-2020",
+      "count": 10
+    },
+    {
+      "id": 3,
+      "code": "CI-1111",
+      "movie": {
+        "id": 1,
+        "name": "ABC"
+      },
+      "dateWatch": "11-11-2020",
+      "count": 10
+    },
+    {
+      "id": 4,
+      "code": "CI-1111",
+      "movie": {
+        "id": 1,
+        "name": "ABC"
+      },
+      "dateWatch": "11-11-2020",
+      "count": 10
+    },
+    {
+      "id": 5,
+      "code": "CI-1111",
+      "movie": {
+        "id": 1,
+        "name": "ABC"
+      },
+      "dateWatch": "11-11-2020",
+      "count": 10
+    }
+  ]
+}

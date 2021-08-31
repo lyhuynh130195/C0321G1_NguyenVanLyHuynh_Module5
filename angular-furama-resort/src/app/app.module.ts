@@ -16,7 +16,7 @@ import {HomeComponent} from './home/home.component';
 import {HomeModule} from './home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {EmployeeRoutingModule} from './employee/employee-routing.module';
-
+import { MatDialogModule} from "@angular/material/dialog";
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +35,8 @@ import {EmployeeRoutingModule} from './employee/employee-routing.module';
     NavbarModule,
     HomeModule,
     EmployeeRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

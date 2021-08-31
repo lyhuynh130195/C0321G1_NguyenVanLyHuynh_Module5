@@ -7,16 +7,18 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {CreateEmployeeComponent} from './create-employee/create-employee.component';
 import {ViewEmployeeComponent} from './view-employee/view-employee.component';
 import {EditEmployeeComponent} from './edit-employee/edit-employee.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 
 
 @NgModule({
-  declarations: [ListEmployeeComponent,CreateEmployeeComponent,ViewEmployeeComponent,EditEmployeeComponent],
+  declarations: [ListEmployeeComponent,CreateEmployeeComponent,ViewEmployeeComponent,EditEmployeeComponent, DeleteEmployeeComponent],
   imports: [
     CommonModule,
     EmployeeRoutingModule,
     NgxPaginationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class EmployeeModule { }

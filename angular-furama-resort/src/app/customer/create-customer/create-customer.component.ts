@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {CustomerService} from '../../service-data/customer.service';
+import {CustomerService} from '../service/customer.service';
+import {Router} from '@angular/router';
+import {CustomerType} from '../model/customertype';
 
 @Component({
   selector: 'app-create-customer',
@@ -9,16 +11,18 @@ import {CustomerService} from '../../service-data/customer.service';
 })
 export class CreateCustomerComponent implements OnInit {
   createCustomerForm: FormGroup;
-
+customerTypes: CustomerType[]
   constructor(private fb: FormBuilder,
-              private customerService: CustomerService) {
+              private customerService: CustomerService,
+              private router: Router) {
+  this.customerTypes = customerService.getAllCustomerType()
   }
 
   ngOnInit(): void {
     this.createCustomerForm = this.fb.group({
       code: ['', [Validators.pattern('^KH-\\d{4}$'), Validators.required]],
       name: ['', Validators.required],
-      type: ['', Validators.required],
+      customerType: ['', Validators.required],
       birthday: ['', Validators.required],
       gender: ['', Validators.required],
       idCard: ['', [Validators.pattern('^(\\d{9}$|\\d{12})$'), Validators.required]],
@@ -30,9 +34,11 @@ export class CreateCustomerComponent implements OnInit {
 
   onSubmit() {
     const customer = this.createCustomerForm.value
-    this.customerService.saveCustomer(customer).subscribe(() =>{
-      alert("create customer success")
-    })
-
+    if(this.createCustomerForm.valid){
+      this.customerService.saveCustomer(customer).subscribe(() =>{
+        alert("create customer success")
+        this.router.navigateByUrl("/customers/list")
+      })
+    }
   }
 }

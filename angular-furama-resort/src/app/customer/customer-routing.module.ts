@@ -20,9 +20,6 @@ const routes: Routes = [
   }, {
     path: 'edit/:id',
     component: EditCustomerComponent
-  }, {
-    path: 'delete/:id',
-    component: DeleteCustomerComponent
   }
 ];
 

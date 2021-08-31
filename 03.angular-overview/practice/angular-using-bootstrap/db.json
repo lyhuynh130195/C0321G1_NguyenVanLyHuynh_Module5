@@ -1,0 +1,44 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "code": "CI-1111",
+      "movie": {
+        "id": 1,
+        "name": "ABC"
+      },
+      "dateWatch": "11-11-2021",
+      "count": 10
+    },
+    {
+      "id": 2,
+      "code": "CI-1112",
+      "movie": {
+        "id": 2,
+        "name": "BCD"
+      },
+      "dateWatch": "10-11-2021",
+      "count": 10
+    },
+    {
+      "id": 3,
+      "code": "CI-1113",
+      "movie": {
+        "id": 3,
+        "name": "DRF"
+      },
+      "dateWatch": "11-12-2021",
+      "count": 19
+    },
+    {
+      "id": 4,
+      "code": "CI-1114",
+      "movie": {
+        "id": 4,
+        "name": "DFG"
+      },
+      "dateWatch": "11-09-2021",
+      "count": 19
+    }
+  ]
+}

@@ -1,103 +1,166 @@
 {
   "customers": [
     {
-      "id": 1,
-      "code": "KH-1000",
-      "name": "Nguyễn Văn Ada",
-      "type": "Platinum",
-      "birthday": "10-10-1995",
-      "gender": "Male",
-      "idCard": "123443211",
-      "phone": "0968569654",
-      "email": "abc@gmail.com",
-      "address": "hn"
-    },
-    {
       "id": 2,
-      "code": "KH-1001",
-      "name": "Nguyễn Văn B",
-      "type": "Diamond",
-      "birthday": "10-10-1995",
-      "gender": "Male",
-      "idCard": "1236987452",
-      "phone": "0966654125",
-      "email": "dac@gmail.com",
-      "address": "DN"
+      "code": "KH-1007",
+      "name": "dat77",
+      "customerType": {
+        "id": 1,
+        "name": "diamond"
+      },
+      "birthday": "2021-08-15",
+      "gender": "Flame",
+      "idCard": "987456322225",
+      "phone": "0999654999",
+      "email": "ac@gmail.com",
+      "address": "NA"
     },
     {
-      "id": 3,
-      "code": "KH-1003",
-      "name": "Nguyễn Văn C",
-      "type": "Gold",
-      "birthday": "10-10-1995",
+      "code": "KH-1021",
+      "name": "huynh444",
+      "customerType": {
+        "id": 2,
+        "name": "platinum"
+      },
+      "birthday": "2021-08-18",
       "gender": "Male",
-      "idCard": "123443211",
-      "phone": "0968569654",
-      "email": "abc@gmail.com",
-      "address": "DN"
+      "idCard": "987456322222",
+      "phone": "0866326888",
+      "email": "lyh195@gmail.com",
+      "address": "NA",
+      "id": 3
     },
     {
-      "id": 4,
-      "code": "KH-1004",
-      "name": "Nguyễn Văn D",
-      "type": "Gold",
-      "birthday": "10-10-1995",
+      "code": "KH-1000",
+      "name": "dat77",
+      "customerType": {
+        "id": 1,
+        "name": "diamond"
+      },
+      "birthday": "2021-08-19",
       "gender": "Male",
-      "idCard": "123443211",
-      "phone": "0968569654",
-      "email": "caf@gmail.com",
-      "address": "DN"
+      "idCard": "987456322222",
+      "phone": "0999654999",
+      "email": "ac@gmail.com",
+      "address": "NA",
+      "id": 4
     },
     {
-      "code": "KH-1005",
+      "code": "KH-1000",
       "name": "huynh",
-      "type": "Diamond",
-      "birthday": "2021-08-17",
+      "customerType": {
+        "id": 1,
+        "name": "diamond"
+      },
+      "birthday": "2021-08-04",
       "gender": "Male",
       "idCard": "987456322222",
       "phone": "0866326888",
       "email": "lyh195@gmail.com",
       "address": "NA",
       "id": 5
+    },
+    {
+      "code": "KH-1000",
+      "name": "dat",
+      "customerType": {
+        "id": 1,
+        "name": "diamond"
+      },
+      "birthday": "2021-08-04",
+      "gender": "Flame",
+      "idCard": "987456322225",
+      "phone": "0866326999",
+      "email": "llh195@gmail.com",
+      "address": "NA",
+      "id": 6
     }
   ],
   "employees": [
     {
-      "id": 1,
-      "name": "Nguyen Van Hai",
-      "birthday": "11-11-1996",
-      "idCard": "123654789",
-      "phone": "0966369666",
-      "email": "hai@gmail.com",
-      "address": "NA",
-      "position": "manager",
-      "division": "manager",
-      "education": "university"
-    },
-    {
-      "id": 2,
-      "name": "Nguyen Van AN",
-      "birthday": "11-11-1996",
-      "idCard": "123654789",
-      "phone": "0966369666",
-      "email": "hai@gmail.com",
-      "address": "NA",
-      "position": "manager",
-      "division": "manager",
-      "education": "university"
-    },
-    {
+      "id": 3,
       "name": "huynh10",
       "birthday": "2021-08-10",
       "idCard": "987456322222",
       "phone": "0866326888",
       "email": "lyh195@gmail.com",
       "address": "NA",
-      "salary": "1000",
-      "position": "manager",
-      "division": "sale",
-      "education": "university",
-      "id": 3
+      "position": {
+        "id": 1,
+        "name": "receptionist"
+      },
+      "division": {
+        "id": 2,
+        "name": "personnel"
+      },
+      "education": {
+        "id": 2,
+        "name": "collage"
+      }
+    },
+    {
+      "name": "dat2",
+      "birthday": "2021-08-30",
+      "idCard": "987456322225",
+      "phone": "0866326999",
+      "email": "llh195@gmail.com",
+      "address": "NA",
+      "salary": "",
+      "position": {
+        "id": 1,
+        "name": "receptionist"
+      },
+      "division": {
+        "id": 2,
+        "name": "personnel"
+      },
+      "education": {
+        "id": 2,
+        "name": "collage"
+      },
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "huynh17",
+      "birthday": "2021-08-17",
+      "idCard": "987456322225",
+      "phone": "0866326888",
+      "email": "lyh195@gmail.com",
+      "address": "NA",
+      "position": {
+        "id": 2,
+        "name": "sale"
+      },
+      "division": {
+        "id": 1,
+        "name": "manager"
+      },
+      "education": {
+        "id": 3,
+        "name": "intermediate"
+      }
+    },
+    {
+      "name": "dat",
+      "birthday": "2021-08-22",
+      "idCard": "987456322222",
+      "phone": "0866326999",
+      "email": "llh195@gmail.com",
+      "address": "NA",
+      "position": {
+        "id": 2,
+        "name": "sale"
+      },
+      "division": {
+        "id": 2,
+        "name": "personnel"
+      },
+      "education": {
+        "id": 2,
+        "name": "collage"
+      },
+      "id": 7
     }
   ]
 }

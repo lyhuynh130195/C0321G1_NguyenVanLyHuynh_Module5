@@ -1,0 +1,28 @@
+<div style="margin-left: 130px">
+  <a class="navbar-brand btn btn-primary mb-2 text-white" [routerLink]="['/create']">Create</a>
+</div>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Count</th>
+      <th scope="col">DELETE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let ticket of tickets| paginate: {itemsPerPage: 3, currentPage: p },index as i">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{ticket.code}}</td>
+      <td>{{ticket.movie.name}}</td>
+      <td>{{ticket.dateWatch}}</td>
+      <td>{{ticket.count}}</td>
+      <td><a class="btn btn-danger" role="button" (click)="openDialog(ticket.id)">Delete</a></td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

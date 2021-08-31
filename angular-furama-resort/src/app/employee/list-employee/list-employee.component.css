@@ -4,10 +4,12 @@
   margin: 10px 130px;
 }
 
-#item2 {
-  position: relative;
+.item{
+  display: flex;
   top: 25px;
 }
+
+
 
 .item-search{
   background-color: #34ce57;

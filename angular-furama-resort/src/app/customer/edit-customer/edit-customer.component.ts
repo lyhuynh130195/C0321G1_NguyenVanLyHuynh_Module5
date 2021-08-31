@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {CustomerService} from '../../service-data/customer.service';
-import {ActivatedRoute} from '@angular/router';
+import {CustomerService} from '../service/customer.service';
+import {ActivatedRoute, Router} from '@angular/router';
+import {CustomerType} from '../model/customertype';
 
 @Component({
   selector: 'app-edit-customer',
@@ -11,10 +12,13 @@ import {ActivatedRoute} from '@angular/router';
 export class EditCustomerComponent implements OnInit {
   editCustomerForm: FormGroup;
   id:number;
+  customerTypes: CustomerType[]
 
   constructor(private fb: FormBuilder,
               private customerService: CustomerService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute,
+              private router: Router) {
+    this.customerTypes = this.customerService.getAllCustomerType()
     const id = this.activatedRoute.snapshot.params.id
     this.id=id
     this.customerService.findById(id).subscribe(value => {
@@ -24,7 +28,7 @@ export class EditCustomerComponent implements OnInit {
       id:0,
       code: ['', [Validators.pattern('^KH-\\d{4}$'), Validators.required]],
       name: ['', Validators.required],
-      type: ['', Validators.required],
+      customerType: ['', Validators.required],
       birthday: ['', Validators.required],
       gender: ['', Validators.required],
       idCard: ['', [Validators.pattern('^(\\d{9}$|\\d{12})$'), Validators.required]],
@@ -41,8 +45,15 @@ export class EditCustomerComponent implements OnInit {
 
   onSubmit(id:number) {
     const customer = this.editCustomerForm.value;
-    this.customerService.upDateCustomer(id,customer).subscribe(()=>{
-      alert('Cập nhật thành công');
-    })
+    if(this.editCustomerForm.valid){
+      this.customerService.upDateCustomer(id,customer).subscribe(()=>{
+        alert('Cập nhật thành công');
+        this.router.navigateByUrl("/customers/list")
+      })
+    }
+  }
+
+  compareFn(c1: any, c2: any): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
 }
